@@ -1,0 +1,19 @@
+{
+  "name": "hacksummit",
+  "version": "1.0.0",
+  "description": "Developed as a part of Hacksummit 2019 by Aaruush-SRMIST by Team Astroller",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shantnu-agarwal/HackSummit-2019.git"
+  },
+  "author": "Shantnu Agarwal, Vrishank Vajpayee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shantnu-agarwal/HackSummit-2019/issues"
+  },
+  "homepage": "https://github.com/shantnu-agarwal/HackSummit-2019#readme"
+}

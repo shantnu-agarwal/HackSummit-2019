@@ -10,9 +10,7 @@ local.properties
 .loadpath
 .recommenders
 
-Tomcat
-
-Servers
+node_modules
 
 # External tool builders
 .externalToolBuilders/

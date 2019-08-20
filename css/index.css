@@ -35,3 +35,7 @@ html, body {
 .btn:hover {
 	background-color: green;
 }
+
+.card{
+	margin-bottom: 10px;
+}

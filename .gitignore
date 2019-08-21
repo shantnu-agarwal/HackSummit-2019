@@ -10,7 +10,9 @@ local.properties
 .loadpath
 .recommenders
 
-node_modules
+apache-tomcat-8.5.5
+out
+.idea
 
 # External tool builders
 .externalToolBuilders/

@@ -62,6 +62,28 @@
 <section id="sec2">
     <div class="container">
         <p class="lead">Choose a type and press search!</p>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Residential Spaces</h5>
+                        <div class="card-img"><i class="fa fa-home" aria-hidden="true" style="font-size: 10rem;"></i></div>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="ResidentialHome" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Business Locations</h5>
+                        <div class="card-img"><i class="fa fa-building" aria-hidden="true" style="font-size: 10rem; display: block; margin: auto"></i></div>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="BusinessHome" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section id="sec3">

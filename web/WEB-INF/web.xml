@@ -4,7 +4,9 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-	<welcome-file>index/html</welcome-file>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
     <servlet>
         <servlet-name>Test Servlet</servlet-name>
         <servlet-class>com.HackSummit.ReadTry</servlet-class>
@@ -12,6 +14,33 @@
     <servlet-mapping>
         <servlet-name>Test Servlet</servlet-name>
         <url-pattern>/read/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Home Servlet</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Home Servlet</servlet-name>
+        <url-pattern>/Home</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>residential</servlet-name>
+        <jsp-file>/residential/rhome.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>residential</servlet-name>
+        <url-pattern>/ResidentialHome</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>business</servlet-name>
+        <jsp-file>/business/bhome.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>business</servlet-name>
+        <url-pattern>/BusinessHome</url-pattern>
     </servlet-mapping>
 
 

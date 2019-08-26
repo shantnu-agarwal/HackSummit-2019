@@ -1,15 +1,13 @@
 package com.HackSummit;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class JDBCConnector {
     private static JDBCConnector instance = new JDBCConnector();
-    public static final String URL = "jdbc:mysql://127.0.0.1:3306/hacksummit";
-    public static final String USER = "root";
-    public static final String PASSWORD = "welcome";
+    public static final String URL = "jdbc:mysql://team-astroller.mysql.database.azure.com:3306/ast?useSSL=true&requireSSL=false";
     public static final String DRIVER_CLASS = "com.mysql.jdbc.Driver";
-
     private JDBCConnector() {
         try {
             Class.forName(DRIVER_CLASS);
@@ -17,14 +15,15 @@ public class JDBCConnector {
             e.printStackTrace();
         }
     }
-
     private Connection createConnection() {
 
         Connection connection = null;
         try {
-            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            System.out.println("Creating conn at JDBCConnector.java");
+            connection = DriverManager.getConnection(URL, "shantnu@team-astroller", "ABCDefgh1234");
         } catch (SQLException e) {
             System.out.println("ERROR: Unable to Connect to Database.");
+            e.printStackTrace();
         }
         return connection;
     }

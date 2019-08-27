@@ -17,32 +17,11 @@
           rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">img</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+<%--HEADER IMPORT FROM TEMPLATE DIRECTORY--%>
+<%@ include file="/template/header.jsp" %>
+    <button onclick="topFunction()" id="scrollBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-            </a></li>
-            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/read/">Support </a></li>
-            <li class="nav-item"><a class="nav-link" href="#">FAQ </a></li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search"
-                   placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
-<button onclick="topFunction()" id="scrollBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-</button>
 
 
 <section class="sec1">
@@ -67,7 +46,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Residential Spaces</h5>
-                        <div class="card-img"><i class="fa fa-home" aria-hidden="true" style="font-size: 10rem;"></i></div>
+                        <div class="card-img"><i class="fa fa-home" aria-hidden="true" style="font-size: 10rem;"></i>
+                        </div>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                         <a href="ResidentialHome" class="btn btn-primary">Go somewhere</a>
                     </div>
@@ -77,7 +57,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Business Locations</h5>
-                        <div class="card-img"><i class="fa fa-building" aria-hidden="true" style="font-size: 10rem; display: block; margin: auto"></i></div>
+                        <div class="card-img"><i class="fa fa-building" aria-hidden="true"
+                                                 style="font-size: 10rem; display: block; margin: auto"></i></div>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                         <a href="BusinessHome" class="btn btn-primary">Go somewhere</a>
                     </div>

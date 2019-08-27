@@ -34,3 +34,5 @@ out
 
 # Annotation Processing
 .apt_generated/
+*.csv
+*.gz

@@ -7,7 +7,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	background-color: rgba(200, 100, 100, 0.9);
-	padding-top: 100px;
+	padding-top: 50px;
 }
 
 #sec2 {
@@ -18,20 +18,3 @@ html, body {
 	background-color: rgba(150, 50, 180, 0.9);
 }
 
-#scrollBtn {
-	display: none;
-	position: fixed;
-	bottom: 4rem;
-	right: 1rem;
-	z-index: 99;
-	border: none;
-	outline: none;
-	background-color: red;
-	color: white;
-	padding: 0.5rem;
-	border-radius: 10px;
-}
-
-.btn:hover {
-	background-color: green;
-}

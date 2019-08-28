@@ -10,51 +10,52 @@
 <head>
     <title>Residential Spaces</title>
     <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HackSummit | Aaruush 2019</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="residential/css/rhome.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+
+    <style>
+        html, body {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">img</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-            </a></li>
-            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/read/">Support </a></li>
-            <li class="nav-item"><a class="nav-link" href="#">FAQ </a></li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search"
-                   placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+<%--HEADER IMPORT FROM TEMPLATE DIRECTORY--%>
+<%@ include file="/template/header.jsp" %>
+
+<div class="container">
+    <h1>Residential Choices</h1>
+    <h2>Filter here</h2>
+    <select>
+        <option value="">size</option>
+        <option value="">room</option>
+    </select>
+
+    <h2>or browse the options</h2>
+    <div class="row">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
     </div>
-</nav>
-<button onclick="topFunction()" id="scrollBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-</button>
-RESIDENTS
 
 
-<footer> &copy; Unified Rental Service - HackSummit Aaruush
-    2019
-</footer>
+</div>
 
+<%@ include file="/template/footer.jsp" %>
 
 <script type="application/javascript" src="js/jquery.min.js"></script>
 <script type="application/javascript" src="js/bootstrap.bundle.js"></script>
 <script type="application/javascript" src="js/index.js"></script>
-<script src="https://kit.fontawesome.com/8957a7e0dd.js"></script>
+<script type="application/javascript" src="https://kit.fontawesome.com/8957a7e0dd.js"></script>
 
 </body>
 </html>

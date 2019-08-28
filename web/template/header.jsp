@@ -19,14 +19,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><a class="nav-link" href="#">Home
+            <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/Home">Home
                 <span class="sr-only">(current)</span>
             </a></li>
             <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/read/">Support </a></li>
-            <li class="nav-item"><a class="nav-link" href="#">FAQ </a></li>
+            <li class="nav-item"><a class="nav-link" href="#!">FAQ </a></li>
         </ul>
 
-        lol
+        SIGN IN AND LOGOUT HERE
 
     </div>
 </nav>

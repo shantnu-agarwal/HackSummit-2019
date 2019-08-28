@@ -10,6 +10,7 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
     <title>HackSummit | Aaruush 2019</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/index.css">
@@ -19,10 +20,6 @@
 <body>
 <%--HEADER IMPORT FROM TEMPLATE DIRECTORY--%>
 <%@ include file="/template/header.jsp" %>
-    <button onclick="topFunction()" id="scrollBtn" title="Go to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
 
 <section class="sec1">
     <div class="container">
@@ -48,8 +45,8 @@
                         <h5 class="card-title">Residential Spaces</h5>
                         <div class="card-img"><i class="fa fa-home" aria-hidden="true" style="font-size: 10rem;"></i>
                         </div>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="ResidentialHome" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Find the perfect house in the city.</p>
+                        <a href="ResidentialHome" class="btn btn-primary">Find More</a>
                     </div>
                 </div>
             </div>
@@ -59,8 +56,8 @@
                         <h5 class="card-title">Business Locations</h5>
                         <div class="card-img"><i class="fa fa-building" aria-hidden="true"
                                                  style="font-size: 10rem; display: block; margin: auto"></i></div>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="BusinessHome" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Boost your business with the best location to set shop!</p>
+                        <a href="BusinessHome" class="btn btn-primary">Find More</a>
                     </div>
                 </div>
             </div>
@@ -73,15 +70,13 @@
     </div>
 </section>
 
-<footer> &copy; Unified Rental Service - HackSummit Aaruush
-    2019
-</footer>
+<%@ include file="/template/footer.jsp" %>
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.bundle.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script src="https://kit.fontawesome.com/8957a7e0dd.js"></script>
+<script type="application/javascript" src="js/jquery.min.js"></script>
+<script type="application/javascript" src="js/bootstrap.bundle.js"></script>
+<script type="application/javascript" src="js/index.js"></script>
+<script type="application/javascript" src="https://kit.fontawesome.com/8957a7e0dd.js"></script>
 
 
 </body>

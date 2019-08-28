@@ -12,7 +12,12 @@
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Spring Security" removed="false">
+          <file>file://$MODULE_DIR$/WEB-INF/spring-security.xml</file>
+          <file>file://$MODULE_DIR$/WEB-INF/spring-database.xml</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">

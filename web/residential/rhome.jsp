@@ -17,13 +17,6 @@
     <link rel="stylesheet" href="residential/css/rhome.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-
-    <style>
-        html, body {
-            height: 100%;
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 <body>
 <%--HEADER IMPORT FROM TEMPLATE DIRECTORY--%>

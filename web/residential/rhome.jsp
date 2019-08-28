@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Residential Spaces</title>
@@ -38,13 +39,20 @@
 
     <h2>or browse the options</h2>
     <div class="row">
+        <% int a=0;
+        while(a<3){
+          %>
         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="..." class="card-img-top" alt="Missing Image">
             <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
             </div>
         </div>
+        <%
+        a++;
+        }%>
+
     </div>
 
 

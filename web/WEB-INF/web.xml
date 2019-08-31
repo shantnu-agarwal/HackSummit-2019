@@ -63,6 +63,15 @@
         <url-pattern>/BusinessHome</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>submitdetails</servlet-name>
+        <servlet-class>com.HackSummit.SubmitDetails</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>submitdetails</servlet-name>
+        <url-pattern>/listing/submitdetails</url-pattern>
+    </servlet-mapping>
+
 
 
 

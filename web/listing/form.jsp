@@ -20,19 +20,19 @@
 <%@ include file="/template/header.jsp" %>
 
 <div class="container">
-    <form action="#!">
+    <form id="details" action="submitdetails" method="post">
         <%-------------DIVISION 1 STARTS HERE--------------%>
         <div class="visibleform" id="div1">
             <div class="form-group">
                 <label for="UIDAI">Aadhaar Number</label>
                 <input type="number" class="form-control" id="UIDAI"
-                       placeholder="Your 12-digit Aadhaar Number" min="100000000000">
+                       placeholder="Your 12-digit Aadhaar Number" name="InputUIDAI">
                 <small class="form-text text-muted">We'll never share your Aadhaar details with anyone else.</small>
             </div>
             <div class="form-group">
                 <label for="InputPhoneNumber">Mobile Number</label>
-                <input type="number" class="form-control" id="InputPhoneNumber"
-                       placeholder="9876543210" min="1000000000">
+                <input type="number" class="form-control" id="InputPhoneNumber" name="InputPhoneNumber"
+                       placeholder="9876543210">
             </div>
             <a href="#!" id="next1">Next</a>
         </div>
@@ -40,59 +40,61 @@
         <div class="hidden" id="div2">
             <div class="form-group">
                 <label for="InputName">Full Name</label>
-                <input type="text" class="form-control" id="InputName"
+                <input type="text" class="form-control" id="InputName" name="InputName"
                        placeholder="Your Full Name">
             </div>
             <div class="form-group">
                 <label for="InputEmail">Email address</label>
-                <input type="text" class="form-control" id="InputEmail"
+                <input type="text" class="form-control" id="InputEmail" name="InputEmail"
                        placeholder="email@example.com">
             </div>
             <div class="form-group">
                 <label for="InputDOB">Date of Birth</label>
-                <input type="date" class="form-control" id="InputDOB">
+                <input type="date" class="form-control" id="InputDOB" name="InputDOB">
             </div>
             <div class="form-group">
                 <label for="InputDOB">Current Address</label>
-                <input type="text" class="form-control" id="InputAddress">
+                <input type="text" class="form-control" id="InputAddress" name="InputAddress">
             </div>
             <a href="#!" id="next2">Next</a>
         </div>
         <%-------------DIVISION 3 STARTS HERE--------------%>
         <div class="hidden" id="div3">
             <label for="InputType">Space Category</label>
-            <select class="custom-select" id="InputType">
+            <select class="custom-select" id="InputType" name="InputType">
                 <option selected>Choose your type of space</option>
                 <option value="1">Residential</option>
                 <option value="2">Commercial / Business</option>
             </select>
 
             <div class="form-group">
-                <label for="InputSpaceAddress">Address of your space</label>
-                <input type="text" class="form-control" id="InputSpaceAddress"
+                <label for="InputSpaceAddress">Address of your space that you want to rent out</label>
+                <input type="text" class="form-control" id="InputSpaceAddress" name="InputSpaceAddress"
                        placeholder="45 TellyPark Road, Andheri East, Mumbai - 400069">
             </div>
 
             <div class="form-group">
                 <label for="InputRooms">Number of Rooms</label>
-                <input type="number" class="form-control" id="InputRooms"
+                <input type="number" class="form-control" id="InputRooms" name="InputRooms"
                        placeholder="5" min="1" max="50">
             </div>
             <div class="form-group">
                 <label for="InputTSA">Total Surface Area (in M<sup>2</sup>)</label>
-                <input type="number" class="form-control" id="InputTSA" placeholder="130">
+                <input type="number" class="form-control" id="InputTSA" placeholder="130" name="InputTSA">
             </div>
             <div class="form-group">
                 <label for="InputPrice">INR</label>
-                <input type="number" class="form-control" id="InputPrice" placeholder="26000" min="5000">
+                <input type="number" class="form-control" id="InputPrice" placeholder="26000" min="5000" name="InputPrice">
             </div>
             <div class="form-group">
                 <input type="checkbox" class="form-check-input" id="Check1">
                 <label class="form-check-label" for="Check1">All details are true to my knowledge</label>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+
     </form>
+    <button id="realsubmit" class="btn btn-primary hidden">Submit</button>
+    <button id="fakesubmit" class="btn btn-primary hidden">Confirm</button>
 </div>
 
 <%@ include file="/template/footer.jsp" %>

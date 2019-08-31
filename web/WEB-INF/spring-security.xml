@@ -9,18 +9,18 @@
 	<!-- enable use-expressions -->
 	<http auto-config="true" use-expressions="true">
 
-		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="*/*" access="hasRole('ROLE_ADMIN')" />
 
 		<!-- access denied page -->
 		<access-denied-handler error-page="/403" />
 
 		<form-login
-				login-page="/login"
+				login-page='/login'
 				default-target-url="/Home"
-				authentication-failure-url="/login?error"
-				username-parameter="username"
-				password-parameter="password"
-				authentication-success-handler-ref="SuccessHandler"/>
+				authentication-failure-url=""
+				username-parameter="username" password-parameter="password"
+
+		/>
 		<logout logout-success-url="/login?logout"  />
 		<!-- enable csrf protection -->
 		<csrf/>
@@ -40,3 +40,7 @@
 	</authentication-manager>
 
 </beans:beans>
+
+
+
+<!--		authentication-success-handler-ref="SuccessHandler"-->

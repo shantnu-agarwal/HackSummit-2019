@@ -40,7 +40,7 @@
                 System.out.println("Opening connection at rhome");
                 Connection connection = JDBCConnector.getConnection();
                 Statement statement = connection.createStatement();
-                ResultSet rs = statement.executeQuery("SELECT * FROM mytable where type='apartment' order by RENT_INR  LIMIT 10;");
+                ResultSet rs = statement.executeQuery("SELECT * FROM mytable where type='apartment' order by RENT_INR  LIMIT 0,12;");
                 while (rs.next()) {
         %>
         <div class="col-4">
@@ -49,7 +49,7 @@
                 <div class="card-body">
                     <p class="card-text" style="white-space: nowrap; overflow: hidden;  overflow-wrap: break-word; height: 50px;text-overflow: ellipsis;"><%=rs.getString("Description")%>
                     </p>
-                    <a class="btn btn-dark card-text text-white" href="#!">Rent: <%=rs.getString("RENT_INR")%>
+                    <a class="btn btn-dark card-text text-white" href="${pageContext.request.contextPath}/template/product.jsp?id=<%=rs.getString("Id") %>">Rent: <%=rs.getString("RENT_INR")%>
                     </a>
                 </div>
             </div>

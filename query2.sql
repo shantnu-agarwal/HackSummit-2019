@@ -12,7 +12,6 @@ create table user_details(
 
 select * from user_details;
 
-select * from mytable;
 
 select distinct AREA from mytable;
 	

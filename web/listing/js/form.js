@@ -1,5 +1,5 @@
 var cnt = []
-bootstrapValidate('#UIDAI', 'max:12:Enter complete Aadhaar Number', function (isValid) {
+bootstrapValidate('#UIDAI', 'max:12:Please enter complete Aadhaar Number', function (isValid) {
     if (!isValid) {
         cnt[0] = 0;
         console.log("INVALID")
@@ -12,6 +12,13 @@ bootstrapValidate('#UIDAI', 'numeric:Please enter numbers only!', function (isVa
         console.log("INVALID")
     } else
         cnt[1] = 1;
+})
+bootstrapValidate('#UIDAI', 'min:12:Please enter complete Aadhaar Number', function (isValid) {
+    if (!isValid) {
+        cnt[12] = 0;
+        console.log("INVALID")
+    } else
+        cnt[12] = 1;
 })
 bootstrapValidate('#InputPhoneNumber', 'max:10:Please check your mobile number', function (isValid) {
     if (!isValid) {
@@ -118,7 +125,13 @@ document.getElementById('realsubmit').onclick = function () {
     console.log("cnt value is : " + cnt);
     if (document.getElementById('InputRooms').value > 30)
         cnt[0] = 0;
+    if (document.getElementById('InputTSA').length < 1)
+        cnt[0] = 0;
     if (document.getElementById('InputPrice').value < 5000)
+        cnt[0] = 0;
+    if (!document.getElementById('Check1').checked)
+        cnt[0] = 0;
+    if (!document.getElementById('InputArea').value)
         cnt[0] = 0;
     for (var i = 0; i < cnt.length; i++)
         if (cnt[i] == 0) {

@@ -11,3 +11,9 @@ create table user_details(
 );
 
 select * from user_details;
+
+select * from mytable;
+
+select distinct AREA from mytable;
+	
+update mytable set AREA='|India|Juhu|Vile Parle|East|' WHERE AREA='|India|Juhu|Vile ParleEast|';

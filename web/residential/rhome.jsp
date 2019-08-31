@@ -1,4 +1,7 @@
-<%--
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="com.HackSummit.JDBCConnector" %>
+<%@ page import="java.sql.Statement" %><%--
   Created by IntelliJ IDEA.
   User: Shantnu Agarwal
   Date: 24-08-2019
@@ -34,6 +37,10 @@
     <div class="row">
         <% int a=0;
         while(a<3){
+            Connection connection = JDBCConnector.getConnection();
+            Statement statement = connection.createStatement();
+//            statement.executeQuery("SELECT * FROM ");
+            ResultSet rs;
           %>
         <div class="card" style="width: 18rem;">
             <img src="..." class="card-img-top" alt="Missing Image">

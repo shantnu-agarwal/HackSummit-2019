@@ -12,3 +12,12 @@ html, body {
     margin: 10px;
     padding: 10px;
 }
+
+.visibleform{
+    visibility: visible;
+
+}
+.hidden{
+    height: 0px;
+    visibility: hidden;
+}

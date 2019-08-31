@@ -17,6 +17,8 @@ select * from users;
 
 select * from user_roles;
 
+-- drop table mytable; 
+
 INSERT INTO users(username,password,enabled)
 VALUES ('shantnu','shantnu', true);
 INSERT INTO user_roles (username, role)

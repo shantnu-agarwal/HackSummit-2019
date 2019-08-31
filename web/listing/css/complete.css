@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     scroll-behavior: smooth;
-    background-color: #9fcdff;
+    background-color: #e83e8c;
 }
 
 .container {
@@ -20,9 +20,4 @@ html, body {
 .hidden{
     height: 0px;
     visibility: hidden;
-}
-
-input::placeholder{
-
-    color: blue;
 }

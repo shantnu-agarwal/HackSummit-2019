@@ -94,10 +94,12 @@
 </section>
 <section id="sec3">
     <div class="container">
-        <p class="lead">Some T&C here.</p>
+        <h2>Some T&C here.</h2>
 
-        <p><input type="checkbox" id="checkbox" style="font-size: 3rem;"> I agree to the above conditions.</p>
+
+
         <form action="">
+            <p><input type="checkbox" id="checkbox" style="font-size: 3rem;" required> I agree to the above conditions.</p>
             <a href="listing/form.jsp" class="btn btn-primary">Continue to list my space.</a>
         </form>
 

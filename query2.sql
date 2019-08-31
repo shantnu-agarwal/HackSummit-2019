@@ -17,3 +17,6 @@ select * from mytable;
 select distinct AREA from mytable;
 	
 update mytable set AREA='|India|Juhu|Vile Parle|East|' WHERE AREA='|India|Juhu|Vile ParleEast|';
+
+alter table mytable add column owner_id char(12);
+

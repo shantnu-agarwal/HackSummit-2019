@@ -34,21 +34,15 @@ bootstrapValidate('#InputPhoneNumber', 'numeric:Please enter numbers only!', fun
     } else
         cnt[3] = 1;
 })
-bootstrapValidate('#InputName', 'max:25:Please check your mobile number', function (isValid) {
+bootstrapValidate('#InputName', 'max:25:Maximum length: 25 characters only.', function (isValid) {
     if (!isValid) {
         cnt[4] = 0;
         console.log("INVALID")
     } else
         cnt[4] = 1;
 });
-bootstrapValidate('#InputName', 'max:25:Please check your mobile number', function (isValid) {
-    if (!isValid) {
-        cnt[5] = 0;
-        console.log("INVALID")
-    } else
-        cnt[5] = 1;
-});
-bootstrapValidate('#InputName', 'alpha:You can only input alphabetic characters', function (isValid) {
+
+bootstrapValidate('#InputName', 'regex:^[a-zA-Z_ ]*$:You can only input alphabetic characters', function (isValid) {
     if (!isValid) {
         cnt[6] = 0;
         console.log("INVALID")

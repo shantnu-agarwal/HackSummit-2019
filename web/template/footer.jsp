@@ -17,6 +17,10 @@
 </footer>
 
 <style>
+    footer{
+        width: 100%;
+
+    }
     #scrollBtn {
         display: none;
         position: fixed;

@@ -1,14 +1,88 @@
-bootstrapValidate('#UIDAI', 'max:12:Enter complete Aadhaar Number');
-bootstrapValidate('#UIDAI', 'numeric:Please enter numbers only!')
-bootstrapValidate('#InputPhoneNumber', 'max:10:Please check your mobile number');
-bootstrapValidate('#InputPhoneNumber', 'numeric:Please enter numbers only!')
-bootstrapValidate('#InputName', 'max:25:Please check your mobile number');
-bootstrapValidate('#InputName', 'max:25:Please check your mobile number');
-bootstrapValidate('#InputName', 'alpha:You can only input alphabetic characters')
-bootstrapValidate('#InputEmail', 'email:Enter a valid email address')
-bootstrapValidate('#InputAddress', 'max:100:Please keep it within 100 characters');
-bootstrapValidate('#InputSpaceAddress', 'max:100:Please keep it within 100 characters');
-bootstrapValidate('#InputPrice', 'max:6:Please keep it within 6 characters');
+var cnt = []
+bootstrapValidate('#UIDAI', 'max:12:Enter complete Aadhaar Number', function (isValid) {
+    if (!isValid) {
+        cnt[0] = 0;
+        console.log("INVALID")
+    } else
+        cnt[0] = 1;
+});
+bootstrapValidate('#UIDAI', 'numeric:Please enter numbers only!', function (isValid) {
+    if (!isValid) {
+        cnt[1] = 0;
+        console.log("INVALID")
+    } else
+        cnt[1] = 1;
+})
+bootstrapValidate('#InputPhoneNumber', 'max:10:Please check your mobile number', function (isValid) {
+    if (!isValid) {
+        cnt[2] = 0;
+        console.log("INVALID")
+    } else
+        cnt[2] = 1;
+});
+bootstrapValidate('#InputPhoneNumber', 'numeric:Please enter numbers only!', function (isValid) {
+    if (!isValid) {
+        cnt[3] = 0;
+        console.log("INVALID")
+    } else
+        cnt[3] = 1;
+})
+bootstrapValidate('#InputName', 'max:25:Please check your mobile number', function (isValid) {
+    if (!isValid) {
+        cnt[4] = 0;
+        console.log("INVALID")
+    } else
+        cnt[4] = 1;
+});
+bootstrapValidate('#InputName', 'max:25:Please check your mobile number', function (isValid) {
+    if (!isValid) {
+        cnt[5] = 0;
+        console.log("INVALID")
+    } else
+        cnt[5] = 1;
+});
+bootstrapValidate('#InputName', 'alpha:You can only input alphabetic characters', function (isValid) {
+    if (!isValid) {
+        cnt[6] = 0;
+        console.log("INVALID")
+    } else
+        cnt[6] = 1;
+})
+bootstrapValidate('#InputEmail', 'email:Enter a valid email address', function (isValid) {
+    if (!isValid) {
+        cnt[7] = 0;
+        console.log("INVALID")
+    } else
+        cnt[7] = 1;
+})
+bootstrapValidate('#InputAddress', 'max:100:Please keep it within 100 characters', function (isValid) {
+    if (!isValid) {
+        cnt[8] = 0;
+        console.log("INVALID")
+    } else
+        cnt[8] = 1;
+});
+bootstrapValidate('#InputSpaceAddress', 'max:100:Please keep it within 100 characters', function (isValid) {
+    if (!isValid) {
+        cnt[9] = 0;
+        console.log("INVALID")
+    } else
+        cnt[10] = 1;
+});
+bootstrapValidate('#InputPrice', 'max:6:Please keep it within 6 characters', function (isValid) {
+    if (!isValid) {
+        cnt[11] = 0;
+        console.log("INVALID")
+    } else
+        cnt[11] = 1;
+});
+bootstrapValidate('#InputPrice', 'numeric:Numbers only please', function (isValid) {
+    if (!isValid) {
+        cnt[12] = 0;
+        console.log("INVALID")
+    } else
+        cnt[11] = 1;
+});
 
 
 document.getElementById('next1').onclick = function () {
@@ -41,5 +115,17 @@ document.getElementById('fakesubmit').onclick = function () {
 }
 
 document.getElementById('realsubmit').onclick = function () {
-    if()
+    console.log("cnt value is : " + cnt);
+    if (document.getElementById('InputRooms').value > 30)
+        cnt[0] = 0;
+    if (document.getElementById('InputPrice').value < 5000)
+        cnt[0] = 0;
+    for (var i = 0; i < cnt.length; i++)
+        if (cnt[i] == 0) {
+            alert("Sorry! Please check your input");
+            return;
+        }
+    document.getElementById('details').submit();
+
+
 }

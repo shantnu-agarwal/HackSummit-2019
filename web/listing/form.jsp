@@ -76,14 +76,14 @@
             <div class="form-group">
                 <label for="InputRooms">Number of Rooms</label>
                 <input type="number" class="form-control" id="InputRooms" name="InputRooms"
-                       placeholder="5" min="1" max="50">
+                       placeholder="5" min="1" max="30">
             </div>
             <div class="form-group">
                 <label for="InputTSA">Total Surface Area (in M<sup>2</sup>)</label>
                 <input type="number" class="form-control" id="InputTSA" placeholder="130" name="InputTSA">
             </div>
             <div class="form-group">
-                <label for="InputPrice">INR</label>
+                <label for="InputPrice">Price <small>(INR)</small></label>
                 <input type="number" class="form-control" id="InputPrice" placeholder="26000" min="5000" name="InputPrice">
             </div>
             <div class="form-group">

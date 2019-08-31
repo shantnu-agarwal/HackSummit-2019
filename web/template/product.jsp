@@ -7,7 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="java.sql.*"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="com.HackSummit.JDBCConnector" %>
+<%@ page import="java.sql.Statement" %>
 <html>
 <head>
     <title>Space Listing | Hack Summit Aaruush</title>
@@ -22,11 +24,26 @@
 <body>
 <%@ include file="/template/header.jsp" %>
 
-    <% try{
-        String id  = request.getParameter("id");
-    }%>
+<%
+    try {
+        System.out.println("Opening connection at rhome");
+        Connection connection = JDBCConnector.getConnection();
+        Statement statement = connection.createStatement();
+        String query = "SELECT * FROM mytable where iD='" + request.getParameter("id")+ "';";
+        ResultSet rs = statement.executeQuery(query);
+        rs.next();
+%>
 
+<div class="container">
+    <img src="<%=rs.getString("image_thumbnail")%>" alt="">
 
+</div>
+<%
+    }
+    catch (Exception e){
+
+    }
+%>
 
 
 <%@ include file="/template/footer.jsp" %>

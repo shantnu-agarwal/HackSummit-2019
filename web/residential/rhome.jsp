@@ -1,7 +1,8 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="com.HackSummit.JDBCConnector" %>
-<%@ page import="java.sql.Statement" %><%--
+<%@ page import="java.sql.Statement" %>
+<%--
   Created by IntelliJ IDEA.
   User: Shantnu Agarwal
   Date: 24-08-2019

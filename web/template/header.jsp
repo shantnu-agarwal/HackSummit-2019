@@ -26,7 +26,7 @@
             <li class="nav-item"><a class="nav-link" href="#!">FAQ </a></li>
         </ul>
 
-        SIGN IN AND LOGOUT HERE
+        <p id="clock"></p>
 
     </div>
 </nav>

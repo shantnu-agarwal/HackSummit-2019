@@ -24,44 +24,18 @@
 <%@ include file="/template/header.jsp" %>
 
 <section class="sec1">
+    <div class="bg"></div>
     <div class="container">
         <h1 class="cover-heading" style="width: 100%">Find Your
             Space</h1>
-        <div style="position: absolute; bottom: 5rem;">
-            <h5 >New to the city? Living here for a decade?</h5>
-            <h3 class="heading">We got you covered</h3>
+        <div style="position: absolute; bottom: 7rem;">
+            <h4>New to the city? Living here for a decade?</h4>
+            <h2 class="heading">We got you covered</h2>
             <p>
-                <a href="#sec2" class="btn btn-lg btn-secondary">Find Spaces</a> <a
-                    href="#sec3" class="btn btn-lg btn-secondary">List Spaces </a>
+                <a href="#sec2" class="btn btn-lg btn-outline-success" style="color: black">Find Spaces</a>
+                <a href="#sec3" class="btn btn-lg btn-outline-success" style="color: black">List Spaces</a>
             </p>
         </div>
-        <%--<div id="login-box">
-
-            <h2>Login with Username and Password</h2>
-
-            <form name='f'
-                  action="http://localhost:8080/HackSummit_war_exploded/login" method='POST'>
-
-                <table>
-                    <tr>
-                        <td>User:</td>
-                        <td><input type='text' name='username'></td>
-                    </tr>
-                    <tr>
-                        <td>Password:</td>
-                        <td><input type='password' name='password'/></td>
-                    </tr>
-                    <tr>
-                        <td colspan='2'><input name="submit" type="submit"
-                                               value="submit"/></td>
-                    </tr>
-                </table>
-
-                <input type="hidden" name="${_csrf.parameterName}"
-                       value="${_csrf.token}"/>
-
-            </form>
-        </div>--%>
     </div>
 
 </section>

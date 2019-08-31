@@ -1,0 +1,14 @@
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: #e4606d;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card{
+    margin: 10px;
+    padding: 10px;
+}

@@ -33,7 +33,7 @@
             <a href="#sec2" class="btn btn-lg btn-secondary">Find Spaces</a> <a
                 href="#sec3" class="btn btn-lg btn-secondary">List Spaces </a>
         </p>
-        <div id="login-box">
+        <%--<div id="login-box">
 
             <h2>Login with Username and Password</h2>
 
@@ -59,7 +59,7 @@
                        value="${_csrf.token}"/>
 
             </form>
-        </div>
+        </div>--%>
     </div>
 
 </section>
@@ -95,6 +95,13 @@
 <section id="sec3">
     <div class="container">
         <p class="lead">Some T&C here.</p>
+
+        <p><input type="checkbox" id="checkbox" style="font-size: 3rem;"> I agree to the above conditions.</p>
+        <form action="">
+            <a href="listing/form.jsp" class="btn btn-primary">Continue to list my space.</a>
+        </form>
+
+
     </div>
 </section>
 
@@ -104,7 +111,7 @@
 <script type="application/javascript" src="js/jquery.min.js"></script>
 <script type="application/javascript" src="js/bootstrap.bundle.js"></script>
 <script type="application/javascript" src="js/index.js"></script>
-<script type="application/javascript" src="https://kit.fontawesome.com/8957a7e0dd.js"></script>
+<script type="application/javascript" src="js/fontawesome.js"></script>
 
 
 </body>

@@ -38,8 +38,8 @@ public class SubmitDetails extends HttpServlet {
             connection = JDBCConnector.getConnection();
             statement = connection.createStatement();
             statement.executeUpdate(query);
-            query = "insert into mytable(Id,Created_on,Operation,Type,Area,Country,RENT_INR,TSA_in_m2,Floor,Rooms,description,City,image_thumbnail,owner_id) values ('"+randomAlphaNumeric(40)+"','"+ "2019-08-31"+ "','rent','"+
-                   0 +"','" + InputArea + "','India','" + InputPrice +"','" + InputTSA+ "','"+ InputFloors+ "','" + InputRooms + "','"+ InputDesc + "','Mumbai','"+ "NULL" + "','"+ UIDAI+ "');";
+            query = "insert into mytable(Id,Created_on,Operation,Type,Area,Country,RENT_INR,TSA_in_m2,Floor,Rooms,description,City,image_thumbnail,owner_id) values ('"+randomAlphaNumeric(40)+"','"+ "2019-09-01"+ "','rent','"+
+                   InputType +"','" + InputArea + "','India','" + InputPrice +"','" + InputTSA+ "','"+ InputFloors+ "','" + InputRooms + "','"+ InputDesc + "','Mumbai','"+ "NULL" + "','"+ UIDAI+ "');";
             System.out.println(query);
             statement.executeUpdate(query);
 

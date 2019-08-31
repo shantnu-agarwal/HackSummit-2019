@@ -9,7 +9,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Residential Spaces</title>
@@ -35,23 +35,32 @@
 
     <h2>or browse the options</h2>
     <div class="row">
-        <% int a=0;
-        while(a<3){
-            Connection connection = JDBCConnector.getConnection();
-            Statement statement = connection.createStatement();
-//            statement.executeQuery("SELECT * FROM ");
-            ResultSet rs;
-          %>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="Missing Image">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
+        <%
+            try {
+                System.out.println("Opening connection at rhome");
+                Connection connection = JDBCConnector.getConnection();
+                Statement statement = connection.createStatement();
+                ResultSet rs = statement.executeQuery("SELECT * FROM mytable where type='apartment' order by RENT_INR  LIMIT 10;");
+                while (rs.next()) {
+        %>
+        <div class="col-4">
+            <div class="card">
+                <img src="<%=rs.getString("image_thumbnail")%>" class="card-img-top" alt="Missing Image" style="max-height: 250px;">
+                <div class="card-body">
+                    <p class="card-text" style="white-space: nowrap; overflow: hidden;  overflow-wrap: break-word; height: 50px;text-overflow: ellipsis;"><%=rs.getString("Description")%>
+                    </p>
+                    <a class="btn btn-dark card-text text-white" href="#!">Rent: <%=rs.getString("RENT_INR")%>
+                    </a>
+                </div>
             </div>
         </div>
         <%
-        a++;
-        }%>
+                }
+            } catch (Exception e) {
+                System.out.println("Error in JSP FILE");
+                e.printStackTrace();
+            }
+        %>
 
     </div>
 

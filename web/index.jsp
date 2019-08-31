@@ -25,14 +25,16 @@
 
 <section class="sec1">
     <div class="container">
-        <h1 class="cover-heading mx-auto" style="width: 100%">Find Your
+        <h1 class="cover-heading" style="width: 100%">Find Your
             Space</h1>
-        <p class="lead">Safety and Security, guaranteed.</p>
-        <h1 class="heading">This is HackSummit</h1>
-        <p class="lead">
-            <a href="#sec2" class="btn btn-lg btn-secondary">Find Spaces</a> <a
-                href="#sec3" class="btn btn-lg btn-secondary">List Spaces </a>
-        </p>
+        <div style="position: absolute; bottom: 5rem;">
+            <h5 >New to the city? Living here for a decade?</h5>
+            <h3 class="heading">We got you covered</h3>
+            <p>
+                <a href="#sec2" class="btn btn-lg btn-secondary">Find Spaces</a> <a
+                    href="#sec3" class="btn btn-lg btn-secondary">List Spaces </a>
+            </p>
+        </div>
         <%--<div id="login-box">
 
             <h2>Login with Username and Password</h2>
@@ -97,9 +99,9 @@
         <h2>Some T&C here.</h2>
 
 
-
         <form action="">
-            <p><input type="checkbox" id="checkbox" style="font-size: 3rem;" required> I agree to the above conditions.</p>
+            <p><input type="checkbox" id="checkbox" style="font-size: 3rem;" required> I agree to the above conditions.
+            </p>
             <a href="listing/form.jsp" class="btn btn-primary">Continue to list my space.</a>
         </form>
 

@@ -22,7 +22,6 @@ html, body {
     visibility: hidden;
 }
 
-input::placeholder{
-
-    color: blue;
+.form-group{
+    margin:1rem;
 }

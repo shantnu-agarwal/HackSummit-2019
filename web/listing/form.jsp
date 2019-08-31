@@ -39,7 +39,7 @@
                 <input type="number" class="form-control" id="InputPhoneNumber" name="InputPhoneNumber"
                        placeholder="9876543210">
             </div>
-            <a href="#!" id="next1">Next</a>
+            <a href="#!" class="btn btn-outline-success" id="next1">Next</a>
         </div>
         <%-------------DIVISION 2 STARTS HERE--------------%>
         <div class="hidden" id="div2">
@@ -61,7 +61,7 @@
                 <label for="InputDOB">Current Address</label>
                 <input type="text" class="form-control" id="InputAddress" name="InputAddress">
             </div>
-            <a href="#!" id="next2">Next</a>
+            <a href="#!" class="btn btn-outline-success" id="next2">Next</a>
         </div>
         <%-------------DIVISION 3 STARTS HERE--------------%>
         <div class="hidden" id="div3">

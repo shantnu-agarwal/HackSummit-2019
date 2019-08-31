@@ -19,6 +19,7 @@
 <style>
     footer{
         width: 100%;
+        text-align: center;
 
     }
     #scrollBtn {

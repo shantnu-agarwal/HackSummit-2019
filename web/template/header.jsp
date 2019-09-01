@@ -23,7 +23,7 @@
                 <span class="sr-only">(current)</span>
             </a></li>
             <li class="nav-item"><a class="nav-link" href="#!">Support </a></li>
-            <li class="nav-item"><a class="nav-link" href="#!">FAQ </a></li>
+            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/faq.jsp">FAQ </a></li>
         </ul>
 
         <p id="clock"></p>

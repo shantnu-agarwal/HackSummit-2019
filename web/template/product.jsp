@@ -117,7 +117,7 @@
         e.printStackTrace();
     }%>
     <div class="row" style="margin: 2rem;">
-        <a href="#!" class="btn btn-dark">Rent it!</a>
+        <a href="${pageContext.request.contextPath}/listing/rentitout.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Rent it!</a>
     </div>
 </div>
 

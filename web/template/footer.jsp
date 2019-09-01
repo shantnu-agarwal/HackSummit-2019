@@ -20,7 +20,7 @@
     footer{
         width: 100%;
         text-align: center;
-        margin-top: 100px;  
+        margin-top: 100px;
 
     }
     #scrollBtn {

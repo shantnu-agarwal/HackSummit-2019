@@ -32,8 +32,8 @@ public class SubmitDetails extends HttpServlet {
         Connection connection = null;
         Statement statement = null;
         try {
-            String query = "insert into user_details(uidai,fullname,dob,phno,email,current_address,create_date) values ('" + UIDAI+ "','" + InputName + "','"+ InputDOB + "','"+ inputPhoneNumber+ "','"+ InputEmail+ "','"+
-                    InputAddress+"','" + timestamp+ "');";
+            String query = "insert into user_details(uidai,fullname,dob,phno,email,current_address,create_date,side) values ('" + UIDAI+ "','" + InputName + "','"+ InputDOB + "','"+ inputPhoneNumber+ "','"+ InputEmail+ "','"+
+                    InputAddress+"','" + timestamp+ "','"+ "owner"+ "');";
             System.out.println(query);
             connection = JDBCConnector.getConnection();
             statement = connection.createStatement();

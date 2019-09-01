@@ -29,11 +29,11 @@
         <h1 class="cover-heading" style="width: 100%">Find Your
             Space</h1>
         <div style="position: absolute; bottom: 7rem;">
-            <h4>New to the city? Living here for a decade?</h4>
-            <h2 class="heading">We got you covered</h2>
+            <h3>New to the city? Living here for a decade?</h3>
+            <h1 class="heading">We got you covered</h1>
             <p>
-                <a href="#sec2" class="btn btn-lg btn-outline-success" style="color: black">Find Spaces</a>
-                <a href="#sec3" class="btn btn-lg btn-outline-success" style="color: black">List Spaces</a>
+                <a href="#sec2" class="btn btn-lg btn-outline-success" style="color: black; background-color: white">Find Spaces</a>
+                <a href="#sec3" class="btn btn-lg btn-outline-success" style="color: black; background-color: white">List Spaces</a>
             </p>
         </div>
     </div>
@@ -76,10 +76,10 @@
 
         <form action="">
             <ul class="list-group list-group-flush" style="margin: 2rem; color: #0b2e13">
-                <li class="list-group-item bg-transparent">I can confirm that the space I am putting out for rent is owned directly by me and has not been rented/leased out to me.</li>
-                <li class="list-group-item bg-transparent">The place is in perfect physical condition where I'd personally live and work, if asked to.</li>
-                <li class="list-group-item bg-transparent">They are no restrictions on the said space regarding renting and leasing.</li>
-                <li class="list-group-item bg-transparent">I understand that if any information that I provide is found to be false, I will be permanently banned from this service.</li>
+                <li class="list-group-item bg-transparent" style="text-align: center"><strong>I can confirm that the space I am putting out for rent is owned directly by me and has not been rented/leased out to me.</strong></li>
+                <li class="list-group-item bg-transparent" style="text-align: center"><strong>The place is in perfect physical condition where I'd personally live and work, if asked to.</strong></li>
+                <li class="list-group-item bg-transparent" style="text-align: center"><strong>They are no restrictions on the said space regarding renting and leasing.</strong></li>
+                <li class="list-group-item bg-transparent" style="text-align: center"><strong>I understand that if any information that I provide is found to be false, I will be permanently banned from this service.</strong></li>
             </ul>
             <p><input type="checkbox" id="checkbox" style="font-size: 3rem;" required> I agree to the above conditions.
             </p>

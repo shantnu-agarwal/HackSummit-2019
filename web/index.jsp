@@ -37,11 +37,11 @@
             </p>
         </div>
     </div>
-
 </section>
 <section id="sec2">
+    <div class="bg"></div>
     <div class="container">
-        <p class="lead">Choose a type and press search!</p>
+        <h2 class="text-white">Choose a type and press search!</h2>
         <div class="row">
             <div class="col-sm-6">
                 <div class="card">
@@ -69,11 +69,18 @@
     </div>
 </section>
 <section id="sec3">
+    <div class="bg"></div>
     <div class="container">
         <h2>Some T&C here.</h2>
 
 
         <form action="">
+            <ul class="list-group list-group-flush" style="margin: 2rem; color: #0b2e13">
+                <li class="list-group-item bg-transparent">I can confirm that the space I am putting out for rent is owned directly by me and has not been rented/leased out to me.</li>
+                <li class="list-group-item bg-transparent">The place is in perfect physical condition where I'd personally live and work, if asked to.</li>
+                <li class="list-group-item bg-transparent">They are no restrictions on the said space regarding renting and leasing.</li>
+                <li class="list-group-item bg-transparent">I understand that if any information that I provide is found to be false, I will be permanently banned from this service.</li>
+            </ul>
             <p><input type="checkbox" id="checkbox" style="font-size: 3rem;" required> I agree to the above conditions.
             </p>
             <a href="listing/form.jsp" class="btn btn-primary">Continue to list my space.</a>

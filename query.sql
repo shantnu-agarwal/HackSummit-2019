@@ -17,6 +17,8 @@ select * from users;
 
 select * from user_roles;
 
+SELECT * from user_details;
+
 select * from mytable;
 
 -- drop table mytable; 

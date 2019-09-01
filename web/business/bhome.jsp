@@ -48,7 +48,7 @@
                 <div class="card-body">
                     <p class="card-text" style="white-space: nowrap; overflow: hidden;  overflow-wrap: break-word; height: 50px;text-overflow: ellipsis;"><%=rs.getString("Description")%>
                     </p>
-                    <a class="btn btn-dark card-text text-white" href="#!">Rent: <%=rs.getString("RENT_INR")%>
+                    <a class="btn btn-dark card-text text-white" href="${pageContext.request.contextPath}/template/product.jsp?id=<%=rs.getString("Id") %>">Rent: <%=rs.getString("RENT_INR")%>
                     </a>
                 </div>
             </div>

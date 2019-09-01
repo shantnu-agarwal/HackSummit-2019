@@ -24,11 +24,38 @@ html, body {
 	background-size: cover;
 	filter: blur(10px);
 }
-#sec2 {
-	background-color: rgba(200, 50, 140, 0.9);
-}
 
-#sec3 {
-	background-color: rgba(150, 50, 180, 0.9);
+
+#sec2 .bg {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url("../assets/home3.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(15px);
+}
+#sec2 {
+	position: relative;
+	z-index: 1;
+}
+#sec3{
+	position: relative;
+	z-index: 1;
+}
+#sec3 .bg{
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url("../assets/home4.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(20px);
 }
 

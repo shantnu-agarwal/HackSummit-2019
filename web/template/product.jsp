@@ -22,30 +22,106 @@
           rel="stylesheet">
 </head>
 <body>
+<section id="sec1">
+    <div id="bg"></div>
+
+
 <%@ include file="/template/header.jsp" %>
 
 <%
+    String owner = null;
     try {
         System.out.println("Opening connection at rhome");
         Connection connection = JDBCConnector.getConnection();
         Statement statement = connection.createStatement();
-        String query = "SELECT * FROM mytable where iD='" + request.getParameter("id")+ "';";
+        String query = "SELECT * FROM mytable where iD='" + request.getParameter("id") + "';";
         ResultSet rs = statement.executeQuery(query);
         rs.next();
+        owner = rs.getString("owner_id");
 %>
 
 <div class="container">
-    <img src="<%=rs.getString("image_thumbnail")%>" alt="">
+    <h1>Listing Information</h1>
+    <h3 style="margin: 2rem;">Quick Facts</h3>
+    <div class="row">
+        <div class="col">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Rooms:</strong> <%=rs.getString("Rooms")%>
+                </li>
+                <li class="list-group-item"><strong>Floors: </strong><%=rs.getString("Floor")%>
+                </li>
+                <li class="list-group-item"><strong>Surface Area: </strong><%=rs.getString("TSA_in_m2")%>
+                </li>
+                <li class="list-group-item"><strong>Monthly Rental: </strong>Rs. <%=rs.getString("RENT_INR")%>
+                </li>
+                <li class="list-group-item"><strong>Locality:</strong> <%=rs.getString("AREA")%>
+                </li>
+            </ul>
+        </div>
+        <div class="col">
+            <img src="<%=rs.getString("image_thumbnail")%>" alt="site image" style="width: 350px">
+        </div>
+    </div>
+    <%
+        } catch (Exception e) {
 
+        }
+        try {
+            System.out.println("Opening connection at rhome");
+            Connection connection = JDBCConnector.getConnection();
+            Statement statement = connection.createStatement();
+            String query = "SELECT * FROM user_details where uidai='" + owner + "';";
+            ResultSet rs = statement.executeQuery(query);
+            rs.next();
+
+    %>
+
+
+    <h3 style="margin: 2rem;">Owner Information</h3>
+    <div class="row">
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active btn-outline-success" id="list-home-list"
+                   data-toggle="list"
+                   href="#list-home" role="tab" aria-controls="home">Owner Name</a>
+                <a class="list-group-item list-group-item-action btn-outline-success" id="list-profile-list"
+                   data-toggle="list"
+                   href="#list-profile" role="tab" aria-controls="profile">Joining Date</a>
+                <a class="list-group-item list-group-item-action btn-outline-success" id="list-messages-list"
+                   data-toggle="list"
+                   href="#list-messages" role="tab" aria-controls="messages">Aadhaar Verified</a>
+                <a class="list-group-item list-group-item-action btn-outline-success" id="list-settings-list"
+                   data-toggle="list"
+                   href="#list-settings" role="tab" aria-controls="settings">Contact Details</a>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                     aria-labelledby="list-home-list"><h4><%=rs.getString("fullname")%> <i>(Trusted User)</i></h4>
+                </div>
+                <div class="tab-pane fade" id="list-profile" role="tabpanel"
+                     aria-labelledby="list-profile-list"><h4><%=rs.getString("create_date")%></h4>
+                </div>
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"><h4>Yes <i>(during registration itself)</i></h4>
+                </div>
+                <div class="tab-pane fade" id="list-settings" role="tabpanel"
+                     aria-labelledby="list-settings-list"><h4>Reach out at : +91 - <%=rs.getString("phno")%>
+                    <br>Or email to: <a href="mailto:<%=rs.getString("email")%>"><%=rs.getString("email")%></a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% } catch (Exception e) {
+        e.printStackTrace();
+    }%>
+    <div class="row" style="margin: 2rem;">
+        <a href="#!" class="btn btn-dark">Rent it!</a>
+    </div>
 </div>
-<%
-    }
-    catch (Exception e){
 
-    }
-%>
-
-
+</section>
 <%@ include file="/template/footer.jsp" %>
 
 <script type="application/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>

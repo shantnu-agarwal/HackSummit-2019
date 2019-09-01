@@ -25,7 +25,6 @@
 <body>
 <%--HEADER IMPORT FROM TEMPLATE DIRECTORY--%>
 <%@ include file="/template/header.jsp" %>
-
 <div class="container">
     <h1>Residential Choices</h1>
     <h2>Filter here</h2>
